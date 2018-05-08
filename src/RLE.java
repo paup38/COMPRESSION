@@ -31,7 +31,7 @@ public class RLE {
             if (last != current && count > 1){
                 os.write(count - 2);
                 os.write(current);
-                //da
+
 
                 count = 1;
             }
