@@ -60,7 +60,7 @@ public class RLE {
                 os.write(current);
             }
 
-            if (last == current) {
+            if (last == current && count != 1) {
                 count++;
                 continue;
             }
