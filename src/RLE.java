@@ -70,6 +70,8 @@ public class RLE {
                     os.write(last);
                 }
                 count = 0;
+                last = -1;
+                continue;
             }
 
             last = current;
