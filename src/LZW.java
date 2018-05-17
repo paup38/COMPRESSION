@@ -1,6 +1,7 @@
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -27,6 +28,14 @@ public class LZW {
         }
 
 
+
+        for (int i = 0; i < list.size(); i++) {
+            os.write(list.get(i).getIndex());
+            os.write(list.get(i).getValor());
+
+        }
+
+
     }
 
     private static int search(List<Token> list, byte symbol, int index) {
@@ -37,17 +46,6 @@ public class LZW {
         }
 
         return -1;
-
-
-
-        /*for (int j = 1; j < tokens.length; j++) {
-            if (i == tokens[j].getValor() && tokens.length == 0){
-                index = j;
-                return index;
-            }else {
-                return -1;
-            }
-        }*/
 
     }
 
